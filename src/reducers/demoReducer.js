@@ -11,6 +11,12 @@ const demoReducer = (state = initialState, action) => {
         items: [...state.items, action.item]
       };
     }
+    case "SET_SHOWN": {
+      return {
+        ...state,
+        shown: action.shown
+      };
+    }
     default:
       return state;
   }
